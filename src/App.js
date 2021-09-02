@@ -1,8 +1,12 @@
 import React from 'react';
+import SuspectsContainer from './containers/SuspectsContainer';
 
 function App() {
   return (
-    <h1>Hello Losers </h1>
+    <div>
+      <h1>FBI Wanted Suspects</h1>
+      <SuspectsContainer/>
+    </div>
   );
 }
 
