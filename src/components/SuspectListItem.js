@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactHtmlParser from 'react-html-parser';
 
 const SuspectListItem = (suspect) => {
     return (
@@ -8,7 +9,7 @@ const SuspectListItem = (suspect) => {
                 
                 <img src={suspect.image}></img>
                 <p>{suspect.caption}</p>
-                {suspect.remarks}
+                {ReactHtmlParser(suspect.remarks)}
                 <p>{suspect.description}</p>
             </div>
         </li>
