@@ -7,10 +7,12 @@ const SuspectListItem = ({suspect, onSuspectClick}) => {
         onSuspectClick(suspect)
     }
     return (
-        <li onClick={handleClick}>
-            <p>{suspect.name}</p>
-            <img src={suspect.image}></img>
-        </li>
+        <div className="suspect-list-item">
+            <div onClick={handleClick}>
+                <p>{suspect.name}</p>
+                <img src={suspect.image}></img>
+            </div>
+        </div>
     )
 }
 

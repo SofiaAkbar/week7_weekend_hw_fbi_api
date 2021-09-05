@@ -17,9 +17,9 @@ const SuspectsList = ({suspects, onSuspectClick}) => {
 
 
     return (
-        <ul>
-            {suspectItems}
-        </ul>
+        <div className='suspects-list'>
+                {suspectItems}
+        </div>
         
     )
 }

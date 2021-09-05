@@ -1,0 +1,35 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.suspects-container{
+    display: flex;
+    justify-content: center;
+    padding-left: 10px;
+    margin: 50px auto;
+}
+
+.suspects-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 400px;
+    overflow: scroll;
+}
+
+.suspect-list-item{
+  width: 120px;
+  height: 200px;
+  padding: 5px;
+  border: 1px white solid
+}
+
+.suspect-details{
+    justify-content: center;
+    width: 400px;
+}
+
+h1{
+    text-align: center;
+}

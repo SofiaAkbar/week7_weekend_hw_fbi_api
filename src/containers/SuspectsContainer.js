@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react';
 import SuspectsList from '../components/SuspectsList';
 import SuspectDetails from '../components/SuspectDetails';
 import Suspect from '../Suspect'
+import '../styles/styles.css';
+
 
 const SuspectsContainer = () => {
     
@@ -25,7 +27,7 @@ const SuspectsContainer = () => {
 
 
     return (
-        <div>
+        <div className="suspects-container">
             <SuspectsList suspects={suspects} onSuspectClick={onSuspectClick}/>
             <br></br>
             <hr></hr>
