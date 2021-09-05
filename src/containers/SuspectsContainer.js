@@ -1,10 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import SuspectsList from '../components/SuspectsList';
 import SuspectDetails from '../components/SuspectDetails';
+import Suspect from '../Suspect'
 
 const SuspectsContainer = () => {
     
     const [suspects, setSuspects] = useState([]);
+    const [selectedSuspect, setSelectedSuspect] = useState(null);
 
     useEffect(() => {
         getSuspects();
@@ -17,13 +19,17 @@ const SuspectsContainer = () => {
         .then(suspects => setSuspects(suspects.items))
     }
 
-    // console.log(suspects[0])
+   const onSuspectClick = function(suspect){
+       setSelectedSuspect(suspect)
+   };
 
 
     return (
         <div>
-            <SuspectsList suspects={suspects}/>
-            <SuspectDetails/>
+            <SuspectsList suspects={suspects} onSuspectClick={onSuspectClick}/>
+            <br></br>
+            <hr></hr>
+            {selectedSuspect ? <SuspectDetails suspect={new Suspect(selectedSuspect)}/> : null}
         </div>
     )
 }

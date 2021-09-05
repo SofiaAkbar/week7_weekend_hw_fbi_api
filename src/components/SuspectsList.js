@@ -1,10 +1,17 @@
 import React from 'react';
 import SuspectListItem from './SuspectListItem'
+import Suspect from '../Suspect'
 
-const SuspectsList = ({suspects}) => {
+const SuspectsList = ({suspects, onSuspectClick}) => {
     const suspectItems = suspects.map((suspect) => {
-        console.log(suspect);
-        return <SuspectListItem name={suspect.title} key={suspect.uid} image={suspect.images[0].thumb} caption={suspect.images[0].caption} remarks={suspect.remarks} description={suspect.description}/>
+
+        return (
+        <SuspectListItem 
+          onSuspectClick={onSuspectClick} 
+          suspect = {new Suspect(suspect)}
+        />
+        
+        )
       })
 
 

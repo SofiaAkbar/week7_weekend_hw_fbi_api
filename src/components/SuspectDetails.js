@@ -1,10 +1,19 @@
 import React from 'react';
+import ReactHtmlParser from 'react-html-parser';
 
-const SuspectDetails = () => {
+const SuspectDetails = ({suspect}) => {
+    
+    console.log(suspect);
     return (
+
         <div>
-            <p>I am a suspect detail</p>
+            <h4>{suspect.title}</h4>
+            <img src={suspect.image}></img>
+            <p>{suspect.caption}</p>
+            <p>{ReactHtmlParser(suspect.remarks)}</p>
+            <p>{suspect.description}</p>
         </div>
+        
     )
 }
 
