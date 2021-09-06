@@ -2,12 +2,13 @@ import React from 'react';
 import ReactHtmlParser from 'react-html-parser';
 
 const SuspectDetails = ({suspect}) => {
-    
+
     console.log(suspect);
     return (
 
         <div className="suspect-details">
             <h4>{suspect.title}</h4>
+            
             <img src={suspect.image}></img>
             <p>{suspect.caption}</p>
 
@@ -30,6 +31,8 @@ const SuspectDetails = ({suspect}) => {
 
             <h5> Remarks </h5>
             <p>{ReactHtmlParser(suspect.remarks)}</p>
+
+            {/* {suspect.images.map((image) => <img src={image}> </img>)} */}
 
         </div>
 

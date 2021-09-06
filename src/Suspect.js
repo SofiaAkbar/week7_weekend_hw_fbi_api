@@ -1,6 +1,7 @@
 class Suspect {
     constructor(data) {
         this.name = data.title
+        this.title = data.title
         this.key = data.uid
         this.images = data.images 
         this.image =  this.images ? this.images[0].thumb : null
